@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game By Sara</title>
+    <link rel="stylesheet" href="FirstPage.css">
+</head>
+<body>
+    <div id="heading">Dice Roll Game</div>
+    
+    <div id="main">
+    <div id="input-container">
+        <h1 id="input_line">Enter player names and start the game!</h1>
+        <input type="text" id="player1Name" placeholder="Enter Player 1 Name">
+        <input type="text" id="player2Name" placeholder="Enter Player 2 Name">
+        <div id="input-buttons">
+            <button id="startButton">Start Game</button>
+            <button id="resetGame">Reset Game</button>
+        </div>
+   
+    
+    </div>
+
+    <div id="container">
+        <div id="First_player">
+            <h1 >Player 1</h1>
+            <img src="dice1.png" alt="dice 6" class="img1">
+              <!-- Current Score Box -->
+              <div id="current_score1" class="score-box">
+                <h2>Current Score:</h2>
+                <span class="score-value" id="player1Current">0</span>
+            </div>
+    
+            <!-- Saved Score Box -->
+            <div id="saved_score1" class="score-box">
+                <h2>Saved Score:</h2>
+                <span class="score-value" id="player1Saved">0</span>
+            </div>
+        </div>
+
+        <div id="Second_player">
+            <h1 >Player 2</h1>
+            <img src="dice1.png" alt="dice 6" class="img1">
+            <div id="current_score2" class="score-box">
+                <h2>Current Score:</h2>
+                <span class="score-value" id="player2Current">0</span>
+            </div>
+    
+            <!-- Saved Score Box -->
+            <div id="saved_score2" class="score-box">
+                <h2>Saved Score:</h2>
+                <span class="score-value" id="player2Saved">0</span>
+            </div>
+        </div>
+
+    </div>
+    <div id="button-container">
+        <button id="rollDice"> Roll  Dice</button>
+        <button id="saveScore">Save Score</button>
+       
+    </div>
+    </div>
+   <script src="FirstPage.js"></script>
+</body>
+</html>
+
