@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game By Sara</title>
+    <link rel="stylesheet" href="startPage.css">
+</head>
+<body>
+    <div class="main">
+        <h1 id="title">Quiz Game</h1>
+
+        <div id="rules">
+            <h2> Game Rules: </h2>
+
+            <ul>
+                <li>Select a category and difficulty level to start.</li>
+                <li>You have 15 seconds to answer each question.</li>
+                <li>Correct answers give you 1 point.</li>
+                <li>See the correct answer if you get it wrong or time runs out.</li>
+                <li>Easy: 10 questions, Medium: 15 questions, Hard: 20 questions.</li>
+            </ul>
+        </div>
+
+        <div class="options">
+            <div>
+                <label for="category">Select Category:</label>
+                <select id="category">
+                    <option value="">Loading categories...</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="level">Select Level:</label>
+                <select id="level">
+                    <option value="">Loading levels...</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="startButton">Start Quiz</button>
+
+
+
+    </div>
+
+    <script src="startPage.js"></script>
+</body>
+</html>

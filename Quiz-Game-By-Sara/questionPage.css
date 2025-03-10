@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d4f1ff, #a6d8ff); /* Gradient background */
+    color: #003366; /* Dark blue text */
+}
+
+.main {
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    background: #ffffff; /* White box */
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+/* .main:hover {
+    transform: translateY(-5px);
+} */
+
+h1 {
+    font-size: 3rem;
+    color: #0066cc;  
+    margin-bottom: 1.5rem;
+    margin-top: -5px;   
+}
+
+h2 {
+    font-size: 1.6rem;  
+    color: #004080;  
+} 
+
+#rules {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1rem;  /* Slightly larger for readability */
+    background: #007acc; /* Updated background color */
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px; 
+    font-size: 1rem;
+    border: 2px solid #0066cc;
+    border-radius: 12px;
+    background: #f0f8ff;  
+    color: #003366;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+#startButton {
+    padding: 14px 28px;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    background: linear-gradient(90deg, #007acc, #005f99);  
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#startButton:hover {
+    background: linear-gradient(90deg, #005f99, #004080);
+    transform: scale(1.05);
+}
+
+#startButton:active {
+    transform: scale(0.95);
+}
+
+/* Question Page Specific Styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    margin-top: -20px;
+}
+
+#score {
+    font-size: 0.8rem;
+    color: #2e8b57;
+    margin-bottom: 5px;
+}
+
+#timer-box {
+    display: flex;
+    flex-direction: row;
+}
+
+#timer-box h2 {
+    font-size: 1rem;
+    color: #dc3545;
+    margin-top: 0.3px;
+}
+
+#timer {
+    font-size: 1rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: black;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+}
+
+#answer-options {
+    padding: 12px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    word-wrap: break-word;
+}
+
+#answer-options:hover {
+    transform: translateY(-2px);
+}
+
+.option.correct {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.option.wrong {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+#correct-answer {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e8b57;
+}
+
+.hidden {
+    display: none;
+}
+
+#nextButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4682b4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#nextButton:hover {
+    background-color: #4169e1;
+    transform: translateY(-2px);
+}
+
+#nextButton:disabled {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+}
+
+#QuestionPage .main {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    }
+
+    .option {
+        font-size: 0.9rem;
+    }
+
+    #nextButton {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #question {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #question {
+        font-size: 1.6rem;
+    }
+}

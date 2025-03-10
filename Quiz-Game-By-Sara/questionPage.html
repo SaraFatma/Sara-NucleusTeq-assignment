@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - Play</title>
+    <link rel="stylesheet" href="questionPage.css">
+<!-- 
+    p3 best thi tryfinal try krhi -->
+</head>
+
+<body>
+    <div class="main">
+        <div id="header">
+        <h1>Quiz Time!</h1>
+        <div id="score-timer">
+        <div class="score" id="score">Score: 0</div>
+
+        <div id="timer-box"><h2>Timer: </h2>
+        <div class="timer" id="timer">15</div>
+        </div>
+        </div>
+        </div>
+
+        <div class="question" id="question">Loading question...</div>
+
+
+        <div class="answer-options" id="answer-options"></div>
+
+
+        <div id="correct-answer" class="hidden"></div>
+
+        <!-- why am i using class and id both??-> class -> Handles consistent styling for groups of similar items.
+        id - > Allows targeting specific elements in JavaScript. -->
+
+        <button id="nextButton" disabled>Next</button>
+    </div>
+
+    <script src="questionPage.js"></script>
+</body>
+
+</html>
